@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
 import { connect } from "react-redux";
+import Form from "react-bootstrap/Form";
 
-import { selectStatus } from "../../ducks/modules/statusSelection";
+import { selectStatus } from "ducks/modules/statusSelection";
 
 const selections = [
   "Complete",

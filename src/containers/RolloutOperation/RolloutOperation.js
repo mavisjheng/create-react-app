@@ -1,19 +1,16 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { connect } from "react-redux";
+import Button from "react-bootstrap/Button";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { HiPause } from "react-icons/hi";
 import { GiStopSign } from "react-icons/gi";
 
-import { selectAction } from "../../ducks/modules/rolloutOperation";
+import { selectAction } from "ducks/modules/rolloutOperation";
 
 import "./RolloutOperation.css";
 
 const RolloutOperation = ({ onActionSelected }) => (
-  <div
-    className="action-buttons"
-    style={{ marginTop: "66px", marginLeft: "12px" }}
-  >
+  <div className="action-buttons">
     <Button variant="outline-primary" onClick={() => onActionSelected("start")}>
       <AiFillPlayCircle />
       Start

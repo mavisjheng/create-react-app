@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Header } from "../../components";
-import { RolloutOperation, StatusSelection, RingTable } from "../../containers";
+import { Header } from "components";
+import { RolloutOperation, StatusSelection, RingTable } from "containers";
 
 const Home = () => (
   <>
