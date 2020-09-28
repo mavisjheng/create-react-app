@@ -1,0 +1,9 @@
+.router-links {
+  color: hsla(0, 0%, 100%, 0.5);
+  margin: 0 12px 0 8px;
+}
+
+.router-links:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  text-decoration: none;
+}
