@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
 
-import { setRings } from "../../redux/actions/rings";
+import { setRings } from "../../ducks/modules/rings";
 
 const getBadgeVariant = (status) => {
   switch (status) {

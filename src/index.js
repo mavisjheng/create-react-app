@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./pages/Home/Home";
-import store from "./redux/store";
+import store from "./ducks/store";
 import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 

@@ -5,7 +5,7 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { HiPause } from "react-icons/hi";
 import { GiStopSign } from "react-icons/gi";
 
-import { selectAction } from "../../redux/actions/rolloutOperation";
+import { selectAction } from "../../ducks/modules/rolloutOperation";
 
 import "./RolloutOperation.css";
 
