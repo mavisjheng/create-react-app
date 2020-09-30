@@ -7,12 +7,12 @@ const initialState = {
   action: "",
 };
 
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
+export default function reducer(state = initialState, { type, payload } = {}) {
+  switch (type) {
     case SELECT_ACTION:
       return {
         ...state,
-        action: action.action,
+        action: payload,
       };
 
     default:
@@ -23,5 +23,5 @@ export default function reducer(state = initialState, action = {}) {
 // action creators
 export const selectAction = (action) => ({
   type: SELECT_ACTION,
-  action,
+  payload: action,
 });

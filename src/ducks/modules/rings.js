@@ -12,8 +12,8 @@ const initialState = {
   hasError: false,
 };
 
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
+export default function reducer(state = initialState, { type, payload } = {}) {
+  switch (type) {
     case GET_RINGS.REQUEST:
       return {
         ...state,
@@ -25,7 +25,7 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         isFetching: false,
-        rings: action.rings,
+        rings: payload,
       };
 
     case GET_RINGS.FAILURE:
@@ -48,7 +48,7 @@ export const getRings = () => async (dispatch) => {
     const result = await axios.get(
       "https://run.mocky.io/v3/adc0e655-b26f-4738-a0d8-9cc976a8fa36"
     );
-    dispatch({ type: GET_RINGS.SUCCESS, rings: result.data });
+    dispatch({ type: GET_RINGS.SUCCESS, payload: result.data });
   } catch (error) {
     dispatch({ type: GET_RINGS.FAILURE });
   }

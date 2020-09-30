@@ -7,12 +7,12 @@ const initialState = {
   status: "All",
 };
 
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
+export default function reducer(state = initialState, { type, payload } = {}) {
+  switch (type) {
     case SELECT_STATUS:
       return {
         ...state,
-        status: action.status,
+        status: payload,
       };
 
     default:
@@ -23,5 +23,5 @@ export default function reducer(state = initialState, action = {}) {
 // action creators
 export const selectStatus = (status) => ({
   type: SELECT_STATUS,
-  status,
+  payload: status,
 });
