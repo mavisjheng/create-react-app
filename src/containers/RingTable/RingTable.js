@@ -5,7 +5,7 @@ import Badge from "react-bootstrap/Badge";
 import Spinner from "react-bootstrap/Spinner";
 import Table from "react-bootstrap/Table";
 
-import { getRings } from "ducks/modules/rings";
+import { fetchRings } from "ducks/modules/rings";
 
 const getBadgeVariant = (status) => {
   switch (status) {
@@ -30,7 +30,7 @@ class RingTable extends Component {
   state = { tableRows: [], allData: [] };
 
   componentDidMount() {
-    this.props.getRings();
+    this.props.fetchRings();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -131,7 +131,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getRings: () => dispatch(getRings()),
+  fetchRings: () => dispatch(fetchRings()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RingTable);
