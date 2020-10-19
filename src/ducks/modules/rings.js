@@ -45,9 +45,7 @@ export const fetchRings = () => async dispatch => {
   dispatch(fetchRingsRoutine.request());
 
   try {
-    const result = await axios.get(
-      'https://run.mocky.io/v3/adc0e655-b26f-4738-a0d8-9cc976a8fa36'
-    );
+    const result = await axios.get('/rings');
     dispatch(fetchRingsRoutine.success(result.data));
   } catch (error) {
     dispatch(fetchRingsRoutine.failure());

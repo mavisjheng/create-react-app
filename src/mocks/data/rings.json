@@ -1,0 +1,86 @@
+[
+  {
+     "target":"GIS (internal critical)",
+     "status":"Complete",
+     "windows":"20.0.0-211",
+     "linux":"20.0.0-211",
+     "unix":"20.0.0-211"
+  },
+  {
+     "target":"General C1WS customer",
+     "status":"Ongoing",
+     "windows":"20.0.1-222",
+     "linux":"20.0.1-222",
+     "unix":"20.0.1-222"
+  },
+  {
+     "target":"Large customer in C1WS",
+     "status":"Failed",
+     "windows":"20.1",
+     "linux":"20.1",
+     "unix":"20.1"
+  },
+  {
+     "target":"10% On-premise DS20 customer",
+     "status":"Ongoing",
+     "windows":"22",
+     "linux":"22",
+     "unix":"22"
+  },
+  {
+     "target":"90% On-premise DS20 customer",
+     "status":"Failed",
+     "windows":"20.1",
+     "linux":"20.1",
+     "unix":"20.1"
+  },
+  {
+     "target":"Legacy DSM customers",
+     "status":"Ongoing",
+     "windows":"20.1-32",
+     "linux":"20.1-32",
+     "unix":"20.1-32"
+  },
+  {
+     "target":"K8S customers",
+     "status":"Paused",
+     "windows":"19.2.3",
+     "linux":"19.2.3",
+     "unix":"19.2.32"
+  },
+  {
+     "target":"ETS",
+     "status":"Complete",
+     "windows":"22",
+     "linux":"22",
+     "unix":"22"
+  },
+  {
+     "target":"Jenkins customers",
+     "status":"Paused",
+     "windows":"20.0.1-2",
+     "linux":"20.0.1-2",
+     "unix":"20.0.1-2"
+  },
+  {
+     "target":"Blackduck",
+     "status":"Complete",
+     "windows":"20",
+     "linux":"20",
+     "unix":"20"
+  },
+  {
+     "target":"DS TW",
+     "status":"Paused",
+     "windows":"22.1",
+     "linux":"22.1",
+     "unix":"22.1"
+  },
+  {
+     "target":"DS CA",
+     "status":"Ongoing",
+     "windows":"22.2",
+     "linux":"22.2",
+     "unix":"22.2"
+  }
+]
