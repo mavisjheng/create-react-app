@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import Alert from "react-bootstrap/Alert";
-import Badge from "react-bootstrap/Badge";
-import Spinner from "react-bootstrap/Spinner";
-import Table from "react-bootstrap/Table";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Alert from 'react-bootstrap/Alert';
+import Badge from 'react-bootstrap/Badge';
+import Spinner from 'react-bootstrap/Spinner';
+import Table from 'react-bootstrap/Table';
 
-import { fetchRings } from "ducks/modules/rings";
+import { fetchRings } from 'ducks/modules/rings';
 
-const getBadgeVariant = (status) => {
+const getBadgeVariant = status => {
   switch (status) {
-    case "Complete":
-      return "success";
+    case 'Complete':
+      return 'success';
 
-    case "Ongoing":
-      return "warning";
+    case 'Ongoing':
+      return 'warning';
 
-    case "Failed":
-      return "danger";
+    case 'Failed':
+      return 'danger';
 
-    case "Aborted":
-      return "dark";
+    case 'Aborted':
+      return 'dark';
 
     default:
-      return "secondary";
+      return 'secondary';
   }
 };
 
@@ -49,22 +49,22 @@ class RingTable extends Component {
     if (prevAction !== rolloutAction) {
       let modifiedData = allData;
 
-      if (rolloutAction === "start") {
-        modifiedData = modifiedData.map((item) => ({
+      if (rolloutAction === 'start') {
+        modifiedData = modifiedData.map(item => ({
           ...item,
-          status: item.status === "Paused" ? "Ongoing" : item.status,
+          status: item.status === 'Paused' ? 'Ongoing' : item.status,
         }));
-      } else if (rolloutAction === "pause") {
-        modifiedData = modifiedData.map((item) => ({
+      } else if (rolloutAction === 'pause') {
+        modifiedData = modifiedData.map(item => ({
           ...item,
-          status: item.status === "Ongoing" ? "Paused" : item.status,
+          status: item.status === 'Ongoing' ? 'Paused' : item.status,
         }));
-      } else if (rolloutAction === "abort") {
-        modifiedData = modifiedData.map((item) => ({
+      } else if (rolloutAction === 'abort') {
+        modifiedData = modifiedData.map(item => ({
           ...item,
           status:
-            item.status === "Ongoing" || item.status === "Paused"
-              ? "Aborted"
+            item.status === 'Ongoing' || item.status === 'Paused'
+              ? 'Aborted'
               : item.status,
         }));
       }
@@ -73,9 +73,9 @@ class RingTable extends Component {
 
     if (prevStatus !== selectedStatus || prevState.allData !== allData) {
       const selectedData =
-        selectedStatus === "All"
+        selectedStatus === 'All'
           ? allData
-          : allData.filter((data) => data.status === selectedStatus);
+          : allData.filter(data => data.status === selectedStatus);
 
       this.setState({ tableRows: selectedData });
     }
@@ -86,11 +86,11 @@ class RingTable extends Component {
     return (
       <>
         {isFetching ? (
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Spinner animation="border" variant="secondary" />
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Spinner animation='border' variant='secondary' />
           </div>
         ) : hasError ? (
-          <Alert variant="danger">Fetching rings error...</Alert>
+          <Alert variant='danger'>Fetching rings error...</Alert>
         ) : (
           <Table bordered>
             <thead>
@@ -124,13 +124,13 @@ class RingTable extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   rings: state.rings,
   selectedStatus: state.statusSelection.status,
   rolloutAction: state.rolloutOperation.action,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   fetchRings: () => dispatch(fetchRings()),
 });
 

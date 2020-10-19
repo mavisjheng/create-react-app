@@ -1,10 +1,10 @@
 // actions
-const NAMESPACE = "rollout-operation";
+const NAMESPACE = 'rollout-operation';
 export const SELECT_ACTION = `${NAMESPACE}/SELECT_ACTION`;
 
 // reducer
 const initialState = {
-  action: "",
+  action: '',
 };
 
 export default function reducer(state = initialState, { type, payload } = {}) {
@@ -21,7 +21,7 @@ export default function reducer(state = initialState, { type, payload } = {}) {
 }
 
 // action creators
-export const selectAction = (action) => ({
+export const selectAction = action => ({
   type: SELECT_ACTION,
   payload: action,
 });

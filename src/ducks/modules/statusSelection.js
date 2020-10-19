@@ -1,10 +1,10 @@
 // actions
-const NAMESPACE = "status-selection";
+const NAMESPACE = 'status-selection';
 export const SELECT_STATUS = `${NAMESPACE}/SELECT_STATUS`;
 
 // reducer
 const initialState = {
-  status: "All",
+  status: 'All',
 };
 
 export default function reducer(state = initialState, { type, payload } = {}) {
@@ -21,7 +21,7 @@ export default function reducer(state = initialState, { type, payload } = {}) {
 }
 
 // action creators
-export const selectStatus = (status) => ({
+export const selectStatus = status => ({
   type: SELECT_STATUS,
   payload: status,
 });

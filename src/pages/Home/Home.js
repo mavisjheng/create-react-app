@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { RolloutOperation, StatusSelection, RingTable } from "containers";
+import { RolloutOperation, StatusSelection, RingTable } from 'containers';
 
 const Home = () => (
   <>
